@@ -85,6 +85,7 @@ The following mandatory extensions are also mandatory in RVA23U64.
 - *A* Atomic instructions.
 - *F* Single-precision floating-point instructions.
 - *D* Double-precision floating-point instructions.
+- *C* Compressed instructions.
 - *B* Bit-manipulation instructions.
 - *Zicsr*  CSR instructions.  These are implied by presence of F.
 - *Zicntr* Base counters and timers.
@@ -118,12 +119,6 @@ address space.
 - *Zcb* Additional compressed instructions.
 - *Zfa* Additional floating-Point instructions.
 - *Zawrs* Wait-on-reservation-set instructions.
-
-NOTE: The combination of "C" and "D" is incompatible with RVY as Zcd is an incompatible extension.
-
-Therefore the following mandatory extension is included instead:
-
-- *Zca* Compressed encodings excluding floating point loads and stores, including capability loads and stores for RVY
 
 The following mandatory extension is RVY specific:
 
@@ -325,7 +320,7 @@ NOTE: How to benefit from the combination of pointer masking and RVY is a resear
 
 The RYA25S64 hybrid options are transitory as over time it is expected that the compatibility requirement will disappear.
 
-- *Smyre* Support for enabling CHERI at different privilege levels (implies Zyhybrid)
+- *Smyre* Support for enabling CHERI at different privilege levels (implies Zyhbrid)
 
 NOTE: Implementing *Smyre* requires that the implementation supports the full RVA23S64 profile.
 
@@ -345,7 +340,7 @@ The following unprivileged (and unratified) ISA extension is RVY specific:
 - *Zys* Sentry definition
 - *Zyhybrid* Support for RV64I base architecture
 
-The following unprivileged (and unratified) ISA extension is general-purpose but added for CHERI software:
+The following unprivileged (and unratified) ISA extension is generalpurpose but added for CHERI software:
 
 - *Zabhlrsc* Byte and halfword load-reserved and store conditional
 
